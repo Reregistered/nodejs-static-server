@@ -24,6 +24,10 @@
 
     app.use(express.errorHandler({ dumpExceptions:true, showStack:true }));
 
+    app.get('/*', function (req,res){
+      res.sendfile(__dirname + '/static/index.html');
+    });
+
   });
 
   /*
