@@ -3,6 +3,7 @@
   /*
    * Include core dependencies.
    */
+  var PORT = process.env.PORT || 8123;
 
   // Forward declaration of a global var abstracting the session store.
   var null_fn = function(){};
@@ -33,6 +34,7 @@
   /*
    * Fire up the webserver
    */
-  app.listen(process.env.PORT || 8123);
+  console.log('Listening on port: ', PORT);
+  app.listen();
 
 })();
